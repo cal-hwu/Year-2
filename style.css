@@ -1,0 +1,88 @@
+:root
+{
+    /* CSS HEX */
+    --jet-black: #000;
+    --white: #fff;
+    --vibrant-coral: rgb(99, 255, 250);
+    --fuchsia-pop: rgb(46, 119, 255);
+    --raspberry-plum: rgb(31, 16, 165);
+
+    /* Color Palette */
+    --background-color: var(--jet-black);
+    --primary-color: var(--white);
+    --accent-color: var(--vibrant-coral);
+    --highlight-color: var(--fuchsia-pop);
+
+    /* Typography */
+    --title-font-family: 'Bowlby One', cursive;
+    --title-font-size: 24px;
+    --title-font-weight: 400;
+    --title-font-color: var(--lime-yellow);
+    --title-font-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    --title-font: var(--title-font-style) var(--title-font-variant) var(--title-font-weight) var(--title-font-stretch) var(--title-font-size)/var(--title-line-height) var(--title-font-family);
+
+}
+
+body
+{
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    font-family: 'Bowlby One', cursive;
+    margin: 0;
+    padding: 10px;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    color: var(--title-font-color);
+    font: var(--title-font);
+}
+
+
+
+.quarterTitle
+{
+    color: var(--highlight-color);
+    font-family: var(--title-font-family);
+    font-size: var(--title-font-size);
+    font-weight: var(--title-font-weight);
+    text-shadow: var(--title-font-shadow);
+}
+
+.quarterTitle:hover
+{
+    color: var(--accent-color);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
+}
+
+.quarters
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.topContainer
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px)
+{
+    .quarters
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .topContainer
+    {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
